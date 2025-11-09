@@ -1,0 +1,172 @@
+/* 根容器样式 */
+.root {
+    -fx-font-family: "Segoe UI", "Microsoft YaHei";
+    -fx-background-color: linear-gradient(to bottom right, #667eea, #764ba2);
+}
+
+/* 主容器 */
+.container {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 20, 0, 0, 5);
+    -fx-padding: 40;
+    -fx-max-width: 900;
+    -fx-max-height: 400;
+}
+
+/* 主要内容区域 */
+.main-content {
+    -fx-alignment: center;
+}
+
+/* 图片区域 */
+.image-section {
+    -fx-alignment: center;
+    -fx-spacing: 15;
+}
+
+.welcome-text {
+    -fx-font-size: 28px;
+    -fx-fill: #2c3e50;
+    -fx-font-weight: bold;
+}
+
+.subtitle {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+/* 表单区域 */
+.form-section {
+    -fx-padding: 20 0 0 0;
+}
+
+.form-title {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.form-subtitle {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+.form-container {
+    -fx-padding: 10 0 0 0;
+}
+
+/* 输入框标签 */
+.input-label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* 文本输入框 */
+.text-field, .password-field {
+    -fx-background-color: #f8f9fa;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #e9ecef;
+    -fx-padding: 12 15;
+    -fx-font-size: 14px;
+    -fx-pref-height: 45;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #667eea;
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.2), 10, 0, 0, 0);
+}
+
+/* 选项容器 - 修改为左右对齐 */
+.options-container {
+    -fx-alignment: center-left;
+    -fx-spacing: 200;
+}
+
+/* 记住密码复选框 - 左对齐 */
+.remember-checkbox {
+    -fx-text-fill: #5a6c7d;
+    -fx-font-size: 14px;
+    -fx-alignment: center-left;
+}
+
+.remember-checkbox .box {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e9ecef;
+    -fx-border-radius: 4;
+}
+
+.remember-checkbox:selected .box {
+    -fx-background-color: #667eea;
+    -fx-border-color: #667eea;
+}
+
+.remember-checkbox:selected .mark {
+    -fx-background-color: white;
+}
+
+/* 忘记密码链接 - 右对齐 */
+.forgot-link {
+    -fx-text-fill: #667eea;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-alignment: center-right;
+}
+
+.forgot-link:hover {
+    -fx-text-fill: #5a67d8;
+    -fx-underline: true;
+}
+
+/* 登录按钮容器 - 新增样式 */
+.login-button-container {
+    -fx-alignment: center;
+    -fx-padding: 10 0 0 0;
+}
+
+/* 登录按钮 */
+.login-button {
+    -fx-background-color: linear-gradient(to right, #667eea, #764ba2);
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-height: 50;
+    -fx-pref-width: 400; /* 设置固定宽度以便居中效果更明显 */
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right, #5a67d8, #6b46c1);
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.4), 15, 0, 0, 5);
+}
+
+.login-button:pressed {
+    -fx-background-color: linear-gradient(to right, #4c51bf, #553c9a);
+}
+
+/* 注册容器 */
+.register-container {
+    -fx-spacing: 5;
+}
+
+.register-label {
+    -fx-text-fill: #7f8c8d;
+    -fx-font-size: 14px;
+}
+
+.register-link {
+    -fx-text-fill: #667eea;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.register-link:hover {
+    -fx-text-fill: #5a67d8;
+    -fx-underline: true;
+}

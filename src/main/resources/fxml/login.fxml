@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.ysq.view.LoginController"
+            stylesheets="@../css/login.css">
+
+    <VBox alignment="CENTER" spacing="20" styleClass="container">
+        <HBox alignment="CENTER" spacing="30" styleClass="main-content">
+            <!-- 左侧图片区域 -->
+            <VBox alignment="CENTER" styleClass="image-section">
+                <!-- TODO -->
+                <ImageView fitWidth="300" fitHeight="300" preserveRatio="true">
+                    <Image url="@../icon/family_system_icon.png" />
+                </ImageView>
+                <Text styleClass="welcome-text">欢迎回来</Text>
+                <Label styleClass="subtitle">请登录您的账户以继续</Label>
+            </VBox>
+
+            <VBox alignment="CENTER_LEFT" spacing="25" styleClass="form-section" prefWidth="350">
+                <VBox spacing="5">
+                    <Label styleClass="form-title">用户登录</Label>
+                    <Label styleClass="form-subtitle">请输入你的账户以登录</Label>
+                </VBox>
+
+                <VBox spacing="20" styleClass="form-container">
+                    <!-- 用户名输入 -->
+                    <VBox spacing="8">
+                        <Label styleClass="input-label">用户名</Label>
+                        <TextField fx:id="usernameField" styleClass="text-field" promptText="请输入用户名"/>
+                    </VBox>
+
+                    <!-- 密码输入 -->
+                    <VBox spacing="8">
+                        <Label styleClass="input-label">密码</Label>
+                        <PasswordField fx:id="passwordField" styleClass="password-field" promptText="请输入密码"/>
+                    </VBox>
+
+                    <!-- 记住密码和忘记密码 -->
+                    <HBox styleClass="options-container">
+                        <CheckBox fx:id="rememberCheckbox" styleClass="remember-checkbox" text="记住密码" HBox.hgrow="ALWAYS"/>
+                        <Hyperlink fx:id="forgotPasswordLink" styleClass="forgot-link" text="忘记密码?" onAction="#handleForgotPassword"/>
+                    </HBox>
+
+                    <!-- 登录按钮 -->
+                    <HBox alignment="CENTER" styleClass="login-button-container">
+                        <Button fx:id="loginButton" styleClass="login-button" text="登录" onAction="#handleLogin" defaultButton="true"/>
+                    </HBox>
+
+                    <!-- 注册链接 -->
+                    <HBox alignment="CENTER" styleClass="register-container">
+                        <Label styleClass="register-label">没有账户?</Label>
+                        <Hyperlink fx:id="registerLink" styleClass="register-link" text="立即注册" onAction="#handleRegister"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</AnchorPane>
